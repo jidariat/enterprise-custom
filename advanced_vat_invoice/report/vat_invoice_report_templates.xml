@@ -42,7 +42,7 @@
                                     </td>
                                     <td class="issue"
                                         style="width:25%; text-align:right;">
-                                        رقم الفاتورة
+                                        تاريخ الفاتورة
                                     </td>
                                     <td style="width:30%; text-align:center;">
                                         <t t-esc="doc.invoice_date"/>
@@ -245,7 +245,7 @@
                                 VAT Number:
                             </td>
                             <td style="border:2pt solid grey;text-align:center;padding:2pt;">
-                                ظريبه الشراء
+                                ضريبه الشراء
                             </td>
                             <td style="border:2pt solid grey;text-align:center;padding:2pt;">
                                 <t t-esc="doc.company_id.vat"/>
@@ -254,7 +254,7 @@
                                 VAT Number:
                             </td>
                             <td style="border:2pt solid grey;text-align:center;padding:2pt;">
-                                ظريبه الشراء
+                                ضريبه الشراء
                             </td>
                             <td style="border:2pt solid grey;text-align:center;padding:2pt;">
                                 <t t-esc="doc.partner_id.vat"/>
@@ -362,7 +362,7 @@
                                     <sapn t-esc="line_tax_total"/>
                                 </td>
                                 <td style="border-right:2pt solid grey;text-align:right;padding:3pt">
-                                    <span t-field="line.price_subtotal"/>
+                                    <span t-esc="line.price_subtotal + line_tax_total"/>
                                 </td>
                             </tr>
                         </tbody>

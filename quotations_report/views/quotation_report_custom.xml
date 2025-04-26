@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="quotation_additional_note" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@class='page']" position="before">
+            <link rel="stylesheet" type="text/css" href="/custom/quotations_report/static/src/css/quotation_report.css"/>
+        </xpath>
+
+        <xpath expr="//div[@class='page']" position="attributes">
+            <attribute name="style">direction: rtl; text-align: right;</attribute>
+        </xpath>
+
+        <xpath expr="//div[@class='page']" position="inside">
+            <div style="margin-top: 30px; direction: rtl; text-align: right;">
+                <table style="width:100%; border:1px solid #ccc; border-collapse:collapse;">
+                    <tr>
+                        <td style="border:1px solid #ccc; padding:8px; font-weight:bold;">اسم البنك</td>
+                        <td style="border:1px solid #ccc; padding:8px;">بنك الإنماء</td>
+                    </tr>
+                    <tr>
+                        <td style="border:1px solid #ccc; padding:8px; font-weight:bold;">اسم الحساب</td>
+                        <td style="border:1px solid #ccc; padding:8px;">مؤسسة جداريات للمقاولات</td>
+                    </tr>
+                    <tr>
+                        <td style="border:1px solid #ccc; padding:8px; font-weight:bold;">الإيبان</td>
+                        <td style="border:1px solid #ccc; padding:8px;">SA5305000068202457428000</td>
+                    </tr>
+                </table>
+            </div>
+        </xpath>
+    </template>
+</odoo>
